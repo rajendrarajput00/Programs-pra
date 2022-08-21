@@ -1,0 +1,64 @@
+
+
+let a = [1, 2, 3, 4, 5]
+
+let k = 5
+
+for (let i = 0; i <= a.length; i+=a.length) {
+
+    let left = i
+    let right = a.length - 1
+    while (left<right) {
+        let temp = a[left]
+        a[left] = a[right]
+        a[right] = temp
+
+        left += 1
+        right -= 1
+    }
+}
+
+console.log('aa', a);
+
+
+let temp = [1, 2, 3, 4]
+
+let k = 2
+let n = temp.length
+let temparr =[]
+
+for (let i = 0; i < n; i++) { 
+  if(i<k){
+    temparr.push(temp[k-(1+i)])
+  }else{
+    temparr.push(temp[i])
+  }
+}
+
+console.log(temparr);
+
+
+
+
+let temp = [1, 2, 3, 4]
+
+let k = 2
+let n = temp.length
+let temparr =[]
+for (let i = 0; i < temp.length; i++) {
+
+    if (i < k) {
+        
+        temparr.push(temp[n+i-k])
+
+    } else {
+       
+        temparr.push(temp[i-k])
+        
+
+    }
+
+
+}
+
+console.log('temparr',temparr);
