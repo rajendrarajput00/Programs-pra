@@ -1,0 +1,76 @@
+
+
+
+const { array } = require("prop-types")
+
+
+function test (){
+
+    let arr =[1,2,3,4,5,6]
+    let k = 3
+    
+    for (let i = 0; i < arr.length; i+=k) {
+
+        let left = i
+        let right = k-1
+
+        while(left<right){
+            let temp = arr[left]
+            arr[left] = arr[right] 
+            arr[right]= temp
+            left +=1
+            right -=1
+        }
+    }
+
+    console.log('hhh',arr);
+
+}
+test()
+
+let string =''
+for (let i = 0; i < 5; i++) {
+    for (let j = 0; j <= i; j++) {
+        console.log("*");
+    }
+    console.log("\n");
+}
+
+
+
+for (var i = 0; i < 3; i++) {
+    (function(j) {
+      setTimeout(function() {
+        console.log(j);
+      }, 0);
+    })(i)
+  }
+
+
+
+  Array.prototype.myMap = function(cb){
+    const resultArry =[];
+    for (let index = 0; index < this.length; index++) {
+        
+        resultArry.push(cb(this[index],index,this))
+        
+    }
+    return resultArry;
+}
+
+let temp = [1,2,3].myMap((val)=>{
+    return val *2
+})  
+
+console.log('temp',temp);
+
+
+
+//reverse array
+let a = [1,2,3,4,5,6]
+for (var i = 0, j = a.length; i < a.length; i++) {
+    a.splice(i, 0, a[j - 1]);
+    a.splice(j, 1);
+  }
+
+  console.log(a);
