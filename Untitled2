@@ -136,3 +136,40 @@ for (let i = 0; i < a.length; i++) {
 
 console.log(temp);
 
+
+
+
+
+
+let a = [1, 5, 3, 4, 3, 5, 6]
+
+let temp = new Map()
+
+for (let i = 0; i < a.length; i++) {
+   
+    if(temp.has(a[i])){
+        temp.set(a[i],temp.get(a[i])+1)
+    }else{
+        temp.set(a[i],1)
+    }
+    
+}
+console.log(temp);
+
+
+for (let i = 0; i < temp.size; i++) {
+
+    if(temp.get(a[i]) >1){
+        
+        console.log(a[i]);
+        console.log(i);
+        console.log(temp.get(a[i]));
+
+
+        break
+
+    }
+    
+
+    
+}
